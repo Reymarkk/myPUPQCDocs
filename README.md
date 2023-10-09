@@ -6,7 +6,7 @@ It offers various submodules and functionalities that enable students, alumni, a
 
 Make sure you have the latest version of Python installed.
 
-Setup & Installation
+Setup & Installatio
 
 Clone the project
 ```bash
