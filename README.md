@@ -8,7 +8,7 @@ Make sure you have the latest version of Python installed.
 
 Setup & Installation
 
-Clone the project
+Clone the projectsssssssssssss
 ```bash
 git clone <repo-url>
 ```
