@@ -383,7 +383,7 @@ img {
   background-image: url("{% static 'images/ecom-banner3.jpg' %}");
 }
   </style>
-
+<!--
 <div class="row">
   <div class="col-md-12">
     <div class="slider-container">
@@ -407,6 +407,7 @@ img {
     </div>
   </div>
 </div>
+-->
 
 
   {%if products%}
@@ -442,7 +443,7 @@ img {
                 <a class="cart" href="{% url 'add-to-cart' p.id  %}">
                   <span class="price">${{p.price}}</span>
                   <span class="add-to-cart">
-                    <span class="txt"><i class="fa fa-shopping-cart"></i> Add To Cart</span>
+                    <span class="txt"><i class="fa fa-shopping-cart"></i> Add for Request</span>
                   </span>
                 </a>
               </div>

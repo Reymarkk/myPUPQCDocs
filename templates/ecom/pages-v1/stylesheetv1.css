@@ -1,0 +1,541 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    text-align: center;
+  }
+
+img{
+    position: relative ;
+}
+
+body{
+    color: #000000
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: maroon;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100; 
+}
+
+.logo{
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 100;
+    left: 10%;
+}
+
+.navbar a {
+    font-size: 25px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a:hover{
+    color: rgb(255, 247, 0);
+}
+
+
+.contactUs{
+    float: left;
+    margin-left: 200px;
+    padding: 170px 0% 0;
+    align-items: center;
+}
+
+.container mb-5{
+    font-size: 100px;
+}
+
+.info{
+    float: left;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 50px 0% 10;
+    text-align: justify;
+    font-size: 25px;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-radius: 5px;
+    border: 1px solid #28a745;
+    font-size: 16px;
+    font-family: Poppins;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px;
+  }
+
+
+
+  /*--------------------------------------------------------------
+# Personal Info
+--------------------------------------------------------------*/
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    text-align: center;
+  }
+
+img{
+    position: relative ;
+}
+
+body{
+    color: #000000
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: maroon;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100; 
+}
+
+.logo{
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 100;
+    left: 10%;
+}
+
+.navbar a {
+    font-size: 25px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a:hover{
+    color: rgb(255, 247, 0);
+}
+
+
+.contactUs{
+    float: left;
+    margin-left: 200px;
+    padding: 170px 0% 0;
+    align-items: center;
+}
+
+.container mb-5{
+    font-size: 100px;
+}
+
+.info{
+    float: left;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 50px 0% 10;
+    text-align: justify;
+    font-size: 25px;
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-label {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.form-label p {
+    color: red;
+    margin: 0;
+    margin-left: 5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.icon-input {
+    position: relative;
+}
+
+.icon-input i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    color: #555;
+}
+
+.form-control {
+    width: 100%;
+    height: 30px;
+
+    padding-left: 40px; /* Adjust this value to align with the icon */
+}
+
+.form-select {
+    width: 100%;
+    height: 30px;
+   cursor: pointer;
+}
+
+.input-group-text {
+    background-color: #f7f7f7;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn-secondary {
+    background-color: #ccc;
+}
+
+.btn:hover {
+    background-color: #218838;
+}
+
+/* Additional styling for specific elements */
+.row {
+    margin-bottom: 20px;
+    
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mt-3 {
+    margin-top: 15px;
+}
+
+.my-4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.col-lg-3 {
+    width: 25%;
+    padding: 0 15px; /* Add some spacing between columns */
+    box-sizing: border-box;
+}
+h1{
+    margin-top: 5%;
+}
+
+
+
+  /*--------------------------------------------------------------
+# Academic Info
+--------------------------------------------------------------*/
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    text-align: center;
+  }
+
+img{
+    position: relative ;
+}
+
+body{
+    color: #000000
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: maroon;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100; 
+}
+
+.logo{
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 100;
+    left: 10%;
+}
+
+.navbar a {
+    font-size: 25px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a:hover{
+    color: rgb(255, 247, 0);
+}
+
+
+.contactUs{
+    float: left;
+    margin-left: 200px;
+    padding: 170px 0% 0;
+    align-items: center;
+}
+
+.container mb-5{
+    font-size: 100px;
+}
+
+.info{
+    float: left;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 50px 0% 10;
+    text-align: justify;
+    font-size: 25px;
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-label {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.form-label p {
+    color: red;
+    margin: 0;
+    margin-left: 5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.icon-input {
+    position: relative;
+}
+
+.icon-input i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    color: #555;
+}
+
+.form-control {
+    width: 100%;
+    height: 30px;
+
+    padding-left: 40px; /* Adjust this value to align with the icon */
+}
+
+.form-select {
+    width: 100%;
+    height: 30px;
+   cursor: pointer;
+}
+
+.input-group-text {
+    background-color: #f7f7f7;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn-secondary {
+    background-color: #ccc;
+}
+
+.btn:hover {
+    background-color: #218838;
+}
+
+/* Additional styling for specific elements */
+.row {
+    margin-bottom: 20px;
+    
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mt-3 {
+    margin-top: 15px;
+}
+
+.my-4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.col-lg-3 {
+    width: 25%;
+    padding: 0 15px; /* Add some spacing between columns */
+    box-sizing: border-box;
+}
+h1{
+    margin-top: 5%;
+}
+
+
+  /*--------------------------------------------------------------
+# Document List
+--------------------------------------------------------------*/
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    text-align: center;
+  }
+
+img{
+    position: relative ;
+}
+
+body{
+    color: #000000
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: maroon;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100; 
+}
+
+.logo{
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 100;
+    left: 10%;
+}
+
+.navbar a {
+    font-size: 25px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a:hover{
+    color: rgb(255, 247, 0);
+}
+
+
+.contactUs{
+    float: left;
+    margin-left: 200px;
+    padding: 170px 0% 0;
+    align-items: center;
+}
+
+.container mb-5{
+    font-size: 100px;
+}
+
+.info{
+    float: left;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 50px 0% 10;
+    text-align: justify;
+    font-size: 25px;
+}
+
+.btn-success2 {
+    background-color: #28a745;
+    border-radius: 5px;
+    border: 1px solid #28a745;
+    font-size: 16px;
+    font-family: Poppins;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.documentList {
+    display: inline-block;
+    justify-content: left;
+    flex-wrap: wrap;
+    align-items: center;
+}
