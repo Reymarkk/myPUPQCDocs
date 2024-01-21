@@ -27,7 +27,15 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
+# Check if ALLOWED_HOSTS environment variable is set
+if "ALLOWED_HOSTS" in os.environ:
+    ALLOWED_HOSTS = os.environ["ALLOWED_HOSTS"].split(" ")
+else:
+    # If not set, provide a default value or raise an exception
+    # For example, using a default value:
+    ALLOWED_HOSTS = ["localhost"]
+    # Alternatively, you can raise an exception to highlight the issue:
+    # raise ValueError("ALLOWED_HOSTS environment variable is not set")
 
 
 # Application definition
