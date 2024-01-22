@@ -13,6 +13,10 @@
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 
+  <!-- Add this script tag in the head section of your HTML -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
   <style>
   body {
     background-color: #f7f7f7;
@@ -204,10 +208,45 @@
 
                     <li class="upper-links"><a class="links" href="/my-order">Track Orders</a></li>
                     <li class="upper-links"><a class="links" href="/my-profile">Profile</a></li>
-                      <li class="upper-links"><a class="links" href="/logout">Logout</a></li>
+                      <!--<li class="upper-links"><a class="links" href="/logout">Logout</a></li>!-->
+                      <li class="upper-links"><a class="links" href="#" id="logout-link">Logout</a></li>
                   
                 </ul>
             </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    // Add a click event listener for the "Logout" link
+                    document.getElementById('logout-link').addEventListener('click', function(e) {
+                        e.preventDefault(); // Prevent the default behavior of the link
+        
+                        // Send a POST request to the logout URL
+                        fetch('/logout', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                // Add any additional headers if needed
+                            },
+                            // You can include a request body if necessary
+                            // body: JSON.stringify({ key: 'value' }),
+                        })
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Network response was not ok');
+                            }
+                            return response.json(); // You can omit this if the response doesn't contain JSON data
+                        })
+                        .then(data => {
+                            // Handle the response if needed
+                            console.log('Logout successful', data);
+                            // Redirect to the desired page after logout
+                            window.location.href = '/logout';  // Replace '/' with the desired URL
+                        })
+                        .catch(error => {
+                            console.error('There was a problem with the fetch operation:', error);
+                        });
+                    });
+                });
+            </script>
             <div class="row row2">
                 <div class="col-sm-3">
                     <h2 style="margin:0px;"><a style="text-decoration:none; color:white;" href="/"><span class="largenav">Simple Ecommerce </span></a></h2>
