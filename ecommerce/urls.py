@@ -15,7 +15,7 @@ urlpatterns = [
     path('',views.home_view,name=''),
     path('afterlogin', views.afterlogin_view,name='afterlogin'),
     path('logout', views.custom_logout_view(template_name='ecom/logout.html'),name='logout'),
-    #path('logout', LogoutView.as_view(template_name='ecom/logout.html'),name='logout'),
+    path('logout', LogoutView.as_view(template_name='ecom/logout.html'),name='logout'),
     path('aboutus', views.aboutus_view),
     path('contactus', views.contactus_view,name='contactus'),
     path('search', views.search_view,name='search'),
