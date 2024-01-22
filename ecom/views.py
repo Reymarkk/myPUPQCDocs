@@ -6,7 +6,6 @@ from django.contrib.auth.models import Group
 from django.contrib.auth.decorators import login_required,user_passes_test
 from django.contrib import messages
 from django.conf import settings
-from django.contrib.auth import logout
 
 def home_view(request):
     products=models.Product.objects.all()
@@ -324,16 +323,6 @@ def send_feedback_view(request):
             feedbackForm.save()
             return render(request, 'ecom/feedback_sent.html')
     return render(request, 'ecom/send_feedback.html', {'feedbackForm':feedbackForm})
-
-def custom_logout_view(request):
-    if request.method == 'POST':
-        # Perform any additional actions if needed before logging out
-        logout(request)
-        # Redirect to the desired URL after logout
-        return redirect('logout.html')  # Change 'your_redirect_url_name' to the appropriate URL name
-    else:
-        # Handle other HTTP methods if necessary
-        return redirect('logout.html')
 
 
 #---------------------------------------------------------------------------------
