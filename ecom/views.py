@@ -200,15 +200,7 @@ def view_feedback_view(request):
     feedbacks=models.Feedback.objects.all().order_by('-id')
     return render(request,'ecom/view_feedback.html',{'feedbacks':feedbacks})
 
-def custom_logout_view(request):
-    if request.method == 'POST':
-        # Perform any additional actions if needed before logging out
-        logout(request)
-        # Redirect to the desired URL after logout
-        return redirect('your_redirect_url_name')  # Change 'your_redirect_url_name' to the appropriate URL name
-    else:
-        # Handle other HTTP methods if necessary
-        return redirect('home')
+
 
 #---------------------------------------------------------------------------------
 #------------------------ PUBLIC CUSTOMER RELATED VIEWS START ---------------------
@@ -332,6 +324,16 @@ def send_feedback_view(request):
             feedbackForm.save()
             return render(request, 'ecom/feedback_sent.html')
     return render(request, 'ecom/send_feedback.html', {'feedbackForm':feedbackForm})
+
+def custom_logout_view(request):
+    if request.method == 'POST':
+        # Perform any additional actions if needed before logging out
+        logout(request)
+        # Redirect to the desired URL after logout
+        return redirect('logout.html')  # Change 'your_redirect_url_name' to the appropriate URL name
+    else:
+        # Handle other HTTP methods if necessary
+        return redirect('logout.html')
 
 
 #---------------------------------------------------------------------------------
