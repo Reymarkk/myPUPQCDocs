@@ -1,0 +1,469 @@
+<html>
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% if request.user.is_authenticated %}
+  {% include "ecom/customer_navbar.html" %}
+{% else %}
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>University Online Document Request</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- UODR LOGO ICON - AYAW GUMANAAAAAA
+  <img src="{% static 'images/favicon.png' %}" rel="shortcut icon" type="image/png">-->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/style.css' %}" rel="text/css">
+
+</head>
+<body>
+  <!-- Add your new header content here -->
+  <section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">	quezoncity@pup.edu.ph</a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span>(632) 8287-8204</span></i>
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <a href="https://www.pup.edu.ph/quezoncity/" class="PUPQC Website" target="_blank"><i class="bi bi-link-45deg"></i></a>
+        <a href="https://www.facebook.com/ThePUPQCBranchOfficial" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="question"><i class="bi bi-question-circle"></i></a>
+      </div>
+    </div>
+  </section>
+
+   <!-- ======= Header ======= -->
+   <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-between">
+
+      <div id="logo">
+        <h1><a href="index.html"><img src="{% static 'images/myPUPQCDocs(1).png' %}" alt="" height="50"></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt=""></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto " href="#faqs">FAQs</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
+          <li class="dropdown">
+            <a href="#"><span>My Account</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="register.html">Register</a></li>
+              <li><a href="login.html">Log In</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+
+  <!-- ======= hero Section ======= -->
+  <section id="hero">
+
+    <div class="hero-content" data-aos="fade-up">
+      <h3>Welcome to the</h3>
+      <h2>University Online Document Request</h2>
+      <h4>This facility to request and track documents is intended <b>ONLY</b> for students/alumni who attended PUPQC</h4>
+      <div>
+        <br>
+        <a href="pages-v1/dataprivacy.html" class="btn-get-started scrollto">Request Document</a>
+        <a href="pages-v1/dataprivacy.html" class="btn-projects scrollto">Track Document</a>
+      </div>
+    </div>
+
+    <div class="hero-slider swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image: url('{% static 'assets/img/uodr/pup1.jpg' %}');"></div>
+        <div class="swiper-slide" style="background-image: url('{% static 'assets/img/uodr/pup2.jpg' %}');"></div>
+        <div class="swiper-slide" style="background-image: url('{% static 'assets/img/uodr/pup3.jpg' %}');"></div>
+        <div class="swiper-slide" style="background-image: url('{% static 'assets/img/uodr/pup4.jpg' %}');"></div>
+      </div>
+    </div>
+
+  </section><!-- End Hero Section -->
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-6 about-img">
+            <img src="{% static 'assets/img/uodr/3d-casual-life-sheets-of-documents.png' %}" alt="">
+          </div>
+
+          <div class="col-lg-6 content">
+            <h2>Say goodbye to delays and paperwork hassles</h2>
+            <h3>Experience a user-friendly journey from document requesting to secure delivery!</h3>
+
+            <ul>
+              <li><i class="bi bi-check-circle"></i> Request your needed documents</li>
+              <li><i class="bi bi-check-circle"></i> Track it's progress</li>
+              <li><i class="bi bi-check-circle"></i> Whether you're a STUDENT or ALUMNI, our comprehensive Online Document Request System ensures a seamless process.</li>
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2 style="color: #800000;">Services</h2>
+          <p>Seamlessly request your academic documents, verify their authenticity with our robust verification service, effortlessly track their progress, and experience hassle-free delivery to your doorstep. Your academic journey just got simpler and more secure.</p>
+        </div>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="box">
+              <div class="icon"><i class="bi bi-briefcase"></i></div>
+              <h4 class="title"><a href="">Request a Document</a></h4>
+              <p class="description">Effortlessly request transcripts, certificates, and letters with a few clicks. Our user-friendly interface makes document requests a breeze, putting you in control of your academic records.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="box">
+              <div class="icon"><i class="bi bi-card-checklist"></i></div>
+              <h4 class="title"><a href="">Document Verification</a></h4>
+              <p class="description">Ensure the authenticity of your academic credentials with our document verification service. The University Admins can easily verify the legitimacy of your transcripts and certificates, adding an extra layer of trust to your educational achievements.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="box">
+              <div class="icon"><i class="bi bi-bar-chart"></i></div>
+              <h4 class="title"><a href="">Track your Document</a></h4>
+              <p class="description">Stay in the loop with real-time updates on the status of your document requests. No more uncertainty—know exactly when your documents are being processed and when they'll be in your hands.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="box">
+              <div class="icon"><i class="bi bi-binoculars"></i></div>
+              <h4 class="title"><a href="">Deliver your Document</a></h4>
+              <p class="description">Choose the delivery method that suits you best—whether it's traditional mail, convenient pickup, or instant digital download. We ensure the secure and confidential delivery of your important academic documents.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    
+
+    <!-- ======= FAQS Section ======= -->
+    <section id="faqs" class="faq section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2 style="color: #800000;">Frequently Asked Questions</h2>
+          <p>Got questions? Explore our FAQ section to find quick solutions to common queries about the University Online Document Request System. Whether you're wondering about the document request process, tracking your requests, or delivery details, we've compiled the most frequently asked questions to make your experience as smooth as possible. If your question isn't here, feel free to reach out to our support team.</p>
+        </div>
+
+        <div class="accordion-list">
+          <ul>
+            <li data-aos="fade-up">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1">How do I request academic documents online? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                <p>
+                  Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                </p>
+              </div>
+            </li>
+    
+            <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed">What documents can I request through the system? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                <p>
+                  Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                </p>
+              </div>
+            </li>
+    
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed">Is there a fee associated with document requests? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                <p>
+                  Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                </p>
+              </div>
+            </li>
+    
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-4" class="collapsed">How can I track the status of my document request? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-4" class="collapse" data-bs-parent=".accordion-list">
+                <p>
+                  Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in.
+                </p>
+              </div>
+            </li>
+    
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-5" class="collapsed">What is the estimated delivery time for requested documents? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-5" class="collapse" data-bs-parent=".accordion-list">
+                <p>
+                  Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-6" class="collapsed">Can I cancel or modify a document request after submission? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-6" class="collapse" data-bs-parent=".accordion-list">
+                <p>
+                  Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-7" class="collapsed">How do I verify the authenticity of the received documents? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-7" class="collapse" data-bs-parent=".accordion-list">
+                <p>
+                  Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-8" class="collapsed">What security measures are in place to protect my personal information? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-8" class="collapse" data-bs-parent=".accordion-list">
+                <p>
+                  Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-9" class="collapsed">Is there a limit to the number of document requests I can submit at once? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-9" class="collapse" data-bs-parent=".accordion-list">
+                <p>
+                  Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="400">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-10" class="collapsed">What should I do if there is an error in the documents I received? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-10" class="collapse" data-bs-parent=".accordion-list">
+                <p>
+                  Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
+                </p>
+              </div>
+            </li>
+    
+          </ul>
+        </div>
+        
+        
+
+      </div>
+    </section><!-- End FAQs Section -->
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2 style="color: #800000;">Contact Us</h2>
+          <p>Have questions or need assistance? Reach out to us at PUPQC's contact hub. Our dedicated team is here to provide prompt and friendly support. Whether you have inquiries about the University Online Document Request System or need general assistance, we're just a message away. 
+            
+            <br><br>Leave any message of feedback you want the team to know and further improve on. Your academic experience matters, and we're here to help you every step of the way.</p>
+        </div>
+
+        <div class="row contact-info">
+
+          <div class="col-md-3">
+            <div class="contact-address">
+              <i class="bi bi-geo-alt"></i>
+              <h3>Address</h3>
+              <address>Don Fabian, Quezon City, 1121 Metro Manila</address>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="contact-phone">
+              <i class="bi bi-phone"></i>
+              <h3>Telephone Number</h3>
+              <p><a href="tel:+155895548855">(02) 8952 7818</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="contact-email">
+              <i class="bi bi-envelope"></i>
+              <h3>Email</h3>
+              <p><a href="mailto:info@example.com">pupcommonwealth@pup.edu.ph</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="contact-phone">
+              <i class="bi bi-clock"></i>
+              <h3>Working Hours</h3>
+              <p>Monday to Saturday<br>8:00 AM - 5:00 PM</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container mb-4">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61752.90268288976!2d121.0247137818679!3d14.681096968421388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ba7528549fb1%3A0x62d21f0cc60f364d!2sPolytechnic%20University%20of%20the%20Philippines%20Quezon%20City!5e0!3m2!1sen!2sph!4v1701059139786!5m2!1sen!2sph" width="1285" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <div class="container">
+        <div class="form">
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <div class="row">
+              <div class="form-group col-md-6">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+              </div>
+              <div class="form-group col-md-6 mt-3 mt-md-0">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group mt-3">
+              <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+            </div>
+
+            <div class="my-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+            </div>
+
+            <div class="text-center"><button type="submit">Send Message</button></div>
+          </form>
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+  {%endif%}
+  <!--
+  <div id="navbar">
+    <div class="container">
+        <div class="row row1">
+            <ul class="largenav pull-right">
+              <li class="upper-links dropdown"><a class="links" href="">Login & Sign Up</a>
+                  <ul class="dropdown-menu">
+                      <li class="profile-li"><a class="profile-links" href="/customerlogin">Login</a></li>
+                      <li class="profile-li"><a class="profile-links" href="/customersignup">Sign Up</a></li>
+                  </ul>
+              </li>
+
+                <li class="upper-links"><a class="links" href="/adminclick">Admin</a></li>
+                <li class="upper-links"><a class="links" href="/aboutus">About Us</a></li>
+                
+            </ul>
+        </div>
+        <div class="row row2">
+            <div class="col-sm-3">
+                <h2 style="margin:0px;"><a style="text-decoration:none; color:white;" href="/"><span class="largenav">UODR </span></a></h2>
+            </div>
+
+
+            <div class="navbar-search smallsearch col-sm-7 col-xs-11">
+              <form  action="/search" method="get">
+                <div class="row"> <input class="navbar-input col-xs-11" type="search" placeholder="Search for Products, Brands and more" name="query" id="query">
+                  <button class="navbar-button col-xs-1" type="submit">
+                    <svg width="15px" height="15px">
+                            <path d="M11.618 9.897l4.224 4.212c.092.09.1.23.02.312l-1.464 1.46c-.08.08-.222.072-.314-.02L9.868 11.66M6.486 10.9c-2.42 0-4.38-1.955-4.38-4.367 0-2.413 1.96-4.37 4.38-4.37s4.38 1.957 4.38 4.37c0 2.412-1.96 4.368-4.38 4.368m0-10.834C2.904.066 0 2.96 0 6.533 0 10.105 2.904 13 6.486 13s6.487-2.895 6.487-6.467c0-3.572-2.905-6.467-6.487-6.467 "></path>
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+
+
+            <div class="cart1 largenav col-sm-2"> <a class="cart-button" href="/cart"> <svg class="cart-svg " width="16 " height="16 " viewBox="0 0 16 16 ">
+                        <path d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86 " fill="#fff "></path>
+                    </svg> Cart <span class="item-number ">{{ product_count_in_cart }}</span> </a> </div>
+        </div>
+    </div>
+</div>
+-->
+  
+
+
+<!-- content start-->
+{% block content %}
+
+{% endblock content %}
+<!-- content end-->
+<br><br><br>
+<footer>
+  <br>
+
+  <p>
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-whatsapp"></a>
+    <a href="#" class="fa fa-instagram"></a>
+    <a href="#" class="fa fa-twitter"></a>
+  </p>
+
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div style="color:#ffffff;" class="wow fadeInUp footer-copyright">
+          <p>UODR<br>
+            &copy; UODR</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+$(document).ready(function(){
+
+function openNav() {
+document.getElementById("mySidenav").style.width = "70%";
+
+document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+document.getElementById("mySidenav").style.width = "0";
+document.body.style.backgroundColor = "rgba(0,0,0,0)";
+}
+
+
+});
+</script>
+
+</body>
+</html>
