@@ -3,157 +3,169 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>UODR</title>
+    <title>Sign up</title>
 
 
 
 
-    <style media="screen">
-      body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    /* background: linear-gradient(to right, #b92b27, #1565c0) */
-}
-
-.box {
-    width: 100%;
-    padding: 40px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    background: #3E454C;
-    text-align: center;
-    transition: 0.25s;
-    margin-top: 100px;
-    border-radius: 50px;
-}
-
-.box input[type="text"],
-.box input[type="password"] {
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid #ffffff;
-    padding: 10px 10px;
-    width: 250px;
-    outline: none;
-    color: white;
-    border-radius: 24px;
-    transition: 0.25s
-}
-
-.box h1 {
-    color: white;
-    /* text-transform: uppercase; */
-    font-weight: 500
-}
-
-.box input[type="text"]:focus,
-.box input[type="password"]:focus {
-    width: 300px;
-    border-color: #d3d3d3
-}
-
-.box input[type="submit"] {
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid #2ecc71;
-    padding: 14px 40px;
-    outline: none;
-    color: white;
-    border-radius: 24px;
-    transition: 0.25s;
-    cursor: pointer
-}
-
-.box input[type="submit"]:hover {
-    background: #2ecc71
-}
-
-.forgot {
-    text-decoration: underline
-}
-
-ul.social-network {
-    list-style: none;
-    display: inline;
-    margin-left: 0 !important;
-    padding: 0
-}
-
-ul.social-network li {
-    display: inline;
-    margin: 0 5px
-}
-
-.social-network a.icoFacebook:hover {
-    background-color: #3B5998
-}
-
-.social-network a.icoTwitter:hover {
-    background-color: #33ccff
-}
-
-.social-network a.icoGoogle:hover {
-    background-color: #BD3518
-}
-
-.social-network a.icoFacebook:hover i,
-.social-network a.icoTwitter:hover i,
-.social-network a.icoGoogle:hover i {
-    color: #fff
-}
-
-a.socialIcon:hover,
-.socialHoverClass {
-    color: #44BCDD
-}
-
-.social-circle li a {
-    display: inline-block;
-    position: relative;
-    margin: 0 auto 0 auto;
-    border-radius: 50%;
-    text-align: center;
-    width: 50px;
-    height: 50px;
-    font-size: 20px
-}
-
-.social-circle li i {
-    margin: 0;
-    line-height: 50px;
-    text-align: center
-}
-
-.social-circle li a:hover i,
-.triggeredHover {
-    transform: rotate(360deg);
-    transition: all 0.2s
-}
-
-.social-circle i {
-    color: #fff;
-    transition: all 0.8s;
-    transition: all 0.8s
-}
-    </style>
+    
   </head>
   <body>
     {% include "ecom/navbar.html" %}
+    <main id="main">
+
+    <!-- ======= Registration ======= --> 
+    <section class="h-100">
+        <div class="container-xl h-100">
+            <div class="row justify-content-sm-center h-100">
+                <div class="col-xxl-12 col-xl-8 col-lg-8 col-md-10 col-sm-12">
+					<div class="text-center my-5"></div>
+					  
+					<div class="card shadow-lg">
+						<div class="card-body p-5">
+							<h1 class="fs-4 card-title fw-bold mb-4">For Bachelor's Degree Students/Graduates of PUP Quezon City ONLY</h1>
+    
+                
+                            <form method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <h1 class="fs-4 card-title fw-bold mb-4">Sign Up</h1>
+        
+                            <!-- ======= Old sign up ======= -->
+                            <h5 style="font-weight: bold;">Old Sign up</h5>
+
+                            <div class="row mb-3">
+                                <div class="col-lg-3">
+                                    <label for="leaveemails" class="form-label">Username</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    {% render_field userForm.username class="form-control" placeholder="Enter your username" %}
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-lg-3">
+                                    <label for="leaveemails" class="form-label">Password</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    {% render_field userForm.username class="form-control" placeholder="Password" %}
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-lg-3">
+                                    <label for="leaveemails" class="form-label">Permanent Address</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    {% render_field userForm.username class="form-control" placeholder="Enter your email" %}
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-lg-3">
+                                    <label for="leaveemails" class="form-label">Contact Number</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    {% render_field userForm.username class="form-control" placeholder="+63 9xx xxx xxxx" %}
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-lg-3">
+                                    <label for="leaveemails" class="form-label">Profile Picture</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    {% render_field customerForm.profile_pic class="form-control" placeholder="Profile pic" %}
+                                </div>
+                            </div>
+                            <script>
+                                function validateForm() {
+                                    var checkbox1 = document.getElementById("invalidCheck1");
+                                    var checkbox2 = document.getElementById("invalidCheck2");
+                            
+                                    if (!checkbox1.checked) {
+                                        alert("Please confirm that you are a Student/Graduate of PUP Quezon City Branch.");
+                                        return false;
+                                    }
+                            
+                                    if (!checkbox2.checked) {
+                                        alert("Please agree to the Terms of Use and Privacy Statement.");
+                                        return false;
+                                    }
+                            
+                                    return true;
+                                }
+                            </script>
+                            
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck1" required>
+                                    <label class="form-check-label" for="invalidCheck1">
+                                        I am a Student/Graduate of PUP Quezon City Branch
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                                    <label class="form-check-label" for="invalidCheck2">
+                                        By using this service, you understood and agree to the PUP Online Services 
+                                        <a href="https://www.pup.edu.ph/terms/" target="_blank">Terms of Use</a> 
+                                        and
+                                        <a href="https://www.pup.edu.ph/privacy/" target="_blank">Privacy Statement</a>
+                                    </label>
+                                </div>
+                            </div>
+        
+                            <!-- Button trigger modal -->
+                            <div class="col-12">
+                                <input type="submit" name="" value="Create" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="submitBtn">
+                            </div>
+        
+                            <!-- Modal -->
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Data Privacy Statement</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+
+                                      <div class="modal-body">
+                                        The Polytechnic University of the Philippines - Quezon City Branch is committed to ensure that the data privacy rights of its stakeholders are upheld and protected. We need to get personal information in order to fulfill your request. Due to data privacy concerns, we will only release documents about academic records to you as the document owner or to your duly authorized representative. You or your representative will be requested to upload a copy of a valid government-issued ID card. You have the right to refuse to provide personal information to us, or withdraw any previously given consent. 
+                                        
+                                        <br><br>However, please understand that your decision to withhold personal information may prevent us from fulfilling your request. By submitting this electronic form, you give permission to the OAd to store and process your personal data in adherence to the principles of transparency, legitimate purpose, and proportionality as required by RA 10173 or the Data Privacy Act of 2012. For concerns on data privacy, please contact us at inquire@pup.edu.ph.</p>
+                                        
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="checkbox" id="flexCheckChecked">
+                                           <label class="form-check-label" for="flexCheckChecked"><b>I agree and understand</b></label> 
+                                        </div>
+
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Dismiss</button>
+                                        <button type="button" class="btn btn-primary">Continue Sign up</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                <!-- ... (similar structure to the provided code) -->
+                            </div>
+
+
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================= -->
+    <!-- End #main -->
+    <!--{% include "ecom/navbar.html" %}-->
     <div class="container">
     <div class="row">
         <div class="col-md-6">
             <div class="card">
                 <form class="box" method="post" enctype="multipart/form-data">
                   {% csrf_token %}
-                    <h1>Customer Sign Up</h1>
+                    <h1>Sign Up</h1>
                     
                       {% render_field userForm.first_name class="form-control" placeholder="First Name" %}
                         {% render_field userForm.last_name class="form-control" placeholder="Last Name" %}
