@@ -22,22 +22,22 @@
 					<div class="text-center my-5"></div>
 					  
 					<div class="card shadow-lg">
+
 						<div class="card-body p-5">
 							<h1 class="fs-4 card-title fw-bold mb-4">For Bachelor's Degree Students/Graduates of PUP Quezon City ONLY</h1>
     
                 
-                            <form method="post" enctype="multipart/form-data">
+                        <form method="post" enctype="multipart/form-data">
                             {% csrf_token %}
                             <h1 class="fs-4 card-title fw-bold mb-4">Sign Up</h1>
         
                             <!-- ======= Old sign up ======= -->
-                            <h5 style="font-weight: bold;">Old Sign up</h5>
                             <div class="row mb-3">
                                 <div class="col-lg-3">
                                     <label for="leaveemails" class="form-label">First Name</label>
                                 </div>
                                 <div class="col-lg-9">
-                                    {% render_field userForm.username class="form-control" placeholder="Enter your first name" %}
+                                    {% render_field userForm.first_name class="form-control" placeholder="Enter your first name" %}
                                 </div>
                             </div>
                             <div class="row mb-3">
@@ -45,7 +45,7 @@
                                     <label for="leaveemails" class="form-label">Last Name</label>
                                 </div>
                                 <div class="col-lg-9">
-                                    {% render_field userForm.username class="form-control" placeholder="Enter your last name while in PUPQC" %}
+                                    {% render_field userForm.last_name class="form-control" placeholder="Enter your last name while in PUPQC" %}
                                 </div>
                             </div>
                             <div class="row mb-3">
@@ -61,7 +61,7 @@
                                     <label for="leaveemails" class="form-label">Password</label>
                                 </div>
                                 <div class="col-lg-9">
-                                    {% render_field userForm.username class="form-control" placeholder="Password" %}
+                                    {% render_field userForm.password class="form-control" placeholder="Password" %}
                                 </div>
                             </div>
                             <div class="row mb-3">
@@ -69,7 +69,7 @@
                                     <label for="leaveemails" class="form-label">Permanent Address</label>
                                 </div>
                                 <div class="col-lg-9">
-                                    {% render_field userForm.username class="form-control" placeholder="Enter your email" %}
+                                    {% render_field customerForm.address class="form-control" placeholder="Enter your email" %}
                                 </div>
                             </div>
                             <div class="row mb-3">
@@ -77,7 +77,7 @@
                                     <label for="leaveemails" class="form-label">Contact Number</label>
                                 </div>
                                 <div class="col-lg-9">
-                                    {% render_field userForm.username class="form-control" placeholder="+63 9xx xxx xxxx" %}
+                                    {% render_field customerForm.mobile class="form-control" placeholder="+63 9xx xxx xxxx" %}
                                 </div>
                             </div>
                             <div class="row mb-3">
@@ -132,7 +132,7 @@
         
                             <!-- Button trigger modal -->
                             <div class="col-12">
-                                <input type="submit" name="" value="Create" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="submitBtn">
+                                <input type="submit" name="" value="Create Account" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="submitBtn">
                             </div>
                             <script>
                                 $(document).ready(function () {
@@ -160,7 +160,7 @@
                                 });
                               </script>
         
-                            <!-- Modal -->
+                            <!-- Modal 
                             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-xl">
                                     <div class="modal-content">
@@ -184,12 +184,10 @@
                                         <button type="button" class="btn btn-primary">Continue Sign up</button>
                                       </div>
                                     </div>
-                                  </div>
+                                </div>-->
                                 <!-- ... (similar structure to the provided code) -->
+                            
                             </div>
-
-
-
 
                         </form>
                     </div>
@@ -200,35 +198,7 @@
 
     <!-- ================================================= -->
     <!-- End #main -->
-    <!--{% include "ecom/navbar.html" %}-->
-    <div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card">
-                <form class="box" method="post" enctype="multipart/form-data">
-                  {% csrf_token %}
-                    <h1>Sign Up</h1>
-                    
-                      {% render_field userForm.first_name class="form-control" placeholder="First Name" %}
-                        {% render_field userForm.last_name class="form-control" placeholder="Last Name" %}
-                          {% render_field userForm.username class="form-control" placeholder="Username" %}
-                            {% render_field userForm.password class="form-control" placeholder="Password" %}
-                              {% render_field customerForm.address class="form-control" placeholder="Address" %}
-                                {% render_field customerForm.mobile class="form-control" placeholder="Contact" %}
-                                  {% render_field customerForm.profile_pic class="form-control" placeholder="Profile pic" %}
-                  
-                     <input type="submit" name="" value="Create">
-
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-<br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br>
+    
 {% include "ecom/footer.html" %}
   </body>
 </html>
