@@ -32,7 +32,22 @@
         
                             <!-- ======= Old sign up ======= -->
                             <h5 style="font-weight: bold;">Old Sign up</h5>
-
+                            <div class="row mb-3">
+                                <div class="col-lg-3">
+                                    <label for="leaveemails" class="form-label">First Name</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    {% render_field userForm.username class="form-control" placeholder="Enter your first name" %}
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-lg-3">
+                                    <label for="leaveemails" class="form-label">Last Name</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    {% render_field userForm.username class="form-control" placeholder="Enter your last name while in PUPQC" %}
+                                </div>
+                            </div>
                             <div class="row mb-3">
                                 <div class="col-lg-3">
                                     <label for="leaveemails" class="form-label">Username</label>
@@ -73,6 +88,7 @@
                                     {% render_field customerForm.profile_pic class="form-control" placeholder="Profile pic" %}
                                 </div>
                             </div>
+                            <!--
                             <script>
                                 function validateForm() {
                                     var checkbox1 = document.getElementById("invalidCheck1");
@@ -91,6 +107,7 @@
                                     return true;
                                 }
                             </script>
+                            -->
                             
                             <div class="col-12">
                                 <div class="form-check">
@@ -117,6 +134,31 @@
                             <div class="col-12">
                                 <input type="submit" name="" value="Create" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="submitBtn">
                             </div>
+                            <script>
+                                $(document).ready(function () {
+                                  $('#submitBtn').on('click', function (e) {
+                                    e.preventDefault();
+                              
+                                    // Validate form inputs
+                                    if (validateForm()) {
+                                      $('#staticBackdrop').modal('show');
+                                    }
+                                  });
+                              
+                                  function validateForm() {
+                                    // Check if checkboxes are checked
+                                    var checkboxes = document.querySelectorAll('.form-check-input[required]');
+                                    for (var i = 0; i < checkboxes.length; i++) {
+                                      if (!checkboxes[i].checked) {
+                                        alert('Please check all required checkboxes.');
+                                        return false;
+                                      }
+                                    }
+                              
+                                    return true;
+                                  }
+                                });
+                              </script>
         
                             <!-- Modal -->
                             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
