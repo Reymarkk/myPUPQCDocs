@@ -17,8 +17,9 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <!-- UODR LOGO ICON - AYAW GUMANAAAAAA
+  <!-- UODR LOGO ICON -
   <img src="{% static 'images/favicon.png' %}" rel="shortcut icon" type="image/png">-->
+  <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}" >
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
@@ -37,6 +38,11 @@
 
 
 </head>
+<style>
+  a {
+    text-decoration: none;
+  }
+</style>
 
 <body>
   <!-- ======= hero Section ======= -->
@@ -103,7 +109,7 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="box">
               <div class="icon"><i class="bi bi-briefcase"></i></div>
-              <h4 class="title"><a href="">Request a Document</a></h4>
+              <h4 class="title"><a href="/customerlogin">Request a Document</a></h4>
               <p class="description">Effortlessly request transcripts, certificates, and letters with a few clicks. Our user-friendly interface makes document requests a breeze, putting you in control of your academic records.</p>
             </div>
           </div>
@@ -119,7 +125,7 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
             <div class="box">
               <div class="icon"><i class="bi bi-bar-chart"></i></div>
-              <h4 class="title"><a href="">Track your Document</a></h4>
+              <h4 class="title"><a href="/customerlogin">Track your Document</a></h4>
               <p class="description">Stay in the loop with real-time updates on the status of your document requests. No more uncertainty—know exactly when your documents are being processed and when they'll be in your hands.</p>
             </div>
           </div>
