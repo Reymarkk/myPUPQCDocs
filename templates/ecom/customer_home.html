@@ -56,37 +56,39 @@
   
   <!-- products data start -->
   <center>
-    <div class="row">
-      {% for p in products %}
-      <div class="col-md-4 mb-4">
-          <!-- Card -->
-          <div class="card">
-              <img src="{% static p.product_image.url %}" class="card-img-top" alt="Product Image">
-              <div class="card-body">
-                  <h5 class="card-title">{{p.name}}</h5>
-                  <p class="card-text">{{p.description}}</p>
-              </div>
-              <div class="card-footer">
-                  <div class="d-flex justify-content-between align-items-center">
-                      <span class="price">${{p.price}}</span>
-                      <a href="{% url 'add-to-cart' p.id %}" class="btn btn-primary">
-                          <i class="fa fa-shopping-cart"></i> Add for Request
-                      </a>
+      <div class="row">
+          {% for p in products %}
+          <div class="col-md-2 mb-4">
+              <!-- Card -->
+              <div class="card">
+                  <img src="{% static p.product_image.url %}" class="card-img-top" alt="Product Image">
+                  <div class="card-body">
+                      <h5 class="card-title">{{p.name}}</h5>
+                      <p class="card-text">{{p.description}}</p>
+                  </div>
+                  <div class="card-footer">
+                      <div class="d-flex justify-content-between align-items-center">
+                          <span class="price">${{p.price}}</span>
+                          <a href="{% url 'add-to-cart' p.id %}" class="btn btn-primary">
+                              <i class=""></i> Add for Request
+                          </a>
+                      </div>
                   </div>
               </div>
+              <!-- End Card -->
           </div>
-          <!-- End Card -->
-      </div>
   
-      {% if forloop.counter|divisibleby:"3" %}
+          {% if forloop.counter|divisibleby:"6" %}
           </div>
           <div class="row">
               <div class="mb-5"></div> <!-- Add some margin between rows -->
           </div>
-      {% endif %}
+          {% endif %}
   
-      {% endfor %}
-  </div>  
+          {% endfor %}
+      </div>
+  </center>
+  
 
 
 <!-- products data end -->
