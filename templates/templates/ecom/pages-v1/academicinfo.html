@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Information</title>
+    <link rel="stylesheet" href="stylesheetv1.css">
+</head>
+<body>
+    <header class="header">
+        <img src="../images/puplogo.png"
+        height="100">
+
+        <a href="#" class="logo">Polytechnic University of the Philippines - Quezon City Branch    
+    <p><h1 style="color:#FEDE05;">OFFICE OF THE REGISTRAR</h1></p> </a>
+        
+        <!-- Your navigation bar -->
+    <nav class="navbar">
+        <a href="/index.html">Home</a>
+        <a href="/index.html">Services</a>
+        <a href="/index.html">Contact</a>
+        <a href="/index.html">FAQs</a>
+    </nav>
+    </header>
+
+    <section class="contactUs">
+        <div class="container">
+            <h1 style="font-size:65px; color:maroon;">ACADEMIC INFORMATION</h1> <br>
+        </div>
+        </section>
+
+
+    <section class="info">
+        <div class="request-form-contents" id="personalInfoContentPage" style="display: block;">
+            <p class="default-text">Please fill up the form with valid information. The information provided will be used to contact and validate the information of the student. Unable to provide the required information may prevent staffs in processing the requested document/s.</p>
+
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-lg-3">
+            <div class="form-group mb-3">
+                <label for="getStudentID" class="form-label d-flex">Student ID<p class="m-0 text-danger mx-1">*</p></label>
+                <input type="text" class="form-control form-control-custom" id="getStudentID" name="getStudentID" maxlength="7" placeholder="xx-xxxx" autocomplete="off">
+                        </div>
+                    </div>
+                    </div>
+
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="form-group mb-3">
+                        <label for="getFirstname" class="form-label d-flex">Level<p class="m-0 text-danger mx-1">*</p></label>
+    
+                            <input type="text" class="form-control" id="getFirstname" name="getFirstname" autocomplete="off" placeholder="Given Name">
+                        </div>
+                    </div>
+                    
+                    
+                <div class="col-lg-3">
+                    <div class="form-group mb-3">
+                        <label for="getMiddlename" class="form-label d-flex">Degree</label>
+                        
+                            <input type="text" class="form-control" id="getMiddlename" name="getMiddlename" autocomplete="off" placeholder="Middle Name">
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                    <div class="form-group mb-3">
+                        <label for="getLastname" class="form-label d-flex">Year Level<p class="m-0 text-danger mx-1">*</p></label>
+                        
+                            <input type="text" class="form-control" id="getLastname" name="getLastname" autocomplete="off" placeholder="Last Name">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                    <div class="form-group mb-3">
+                        <label for="getSuffix" class="form-label d-flex">Admitted as</label>
+                        <div class="icon-input">
+                            <select name="selectSuffix" id="selectSuffix" class="form-select selectSuffix mb-2">
+                                <option value="0">No suffix</option>
+                                <option value="1">JR</option>
+                                <option value="2">SR</option>
+                                <option value="3">II</option>
+                                <option value="4">III</option>
+                                <option value="5">IV</option>
+                                <option value="6">Other, please specify</option>
+                            </select>
+
+                            <input type="text" class="form-control getSuffix d-none" id="getSuffix" name="getSuffix" autocomplete="off" placeholder="Please specify...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="form-group mb-3">
+                        <label for="getCourse" class="form-label d-flex">Course<p class="m-0 text-danger mx-1">*</p></label>
+                        <select name="getCourse" id="getCourse" class="form-select text-capitalize">
+                            <option value="0">-- Select course --</option>
+                        <optgroup label="GRADUATE STUDIES">
+                        	<option value="2">MASTER IN INFORMATION TECHNOLOGY</option>
+                        	<option value="3">MASTER IN EDUCATIONAL MANAGEMENT</option>
+                        	<option value="4">MASTER IN PUBLIC ADMINISTRATION</option>
+                        </optgroup>
+                        <optgroup label="UNDERGRADUATE DEGREES">
+                        	<option value="5">BACHELOR IN BUSINESS TEACHER EDUCATION</option>
+                        	<option value="6">BACHELOR OF BUSINESS ADMINISTRATION</option>
+                        	<option value="7">BACHELOR OF PUBLIC ADMINISTRATION MAJOR IN PUBLIC FINANCIAL MANAGEMENT</option>
+                        	<option value="8">BACHELOR OF SCIENCE IN BUSINESS ADMINISTRATION MAJOR IN HUMAN RESOURCE DEVELOPMENT MANAGEMENT</option>
+                        	<option value="9">BACHELOR OF SCIENCE IN BUSINESS ADMINISTRATION MAJOR IN MARKETING MANAGEMENT</option>
+                        	<option value="10">BACHELOR OF SCIENCE IN ENTREPRENEURIAL MANAGEMENT</option>
+                        	<option value="11">BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY</option>
+                        </optgroup>
+                        <optgroup label="DIPLOMA">
+                        	<option value="12">DIPLOMA IN OFFICE MANAGEMENT TECHNOLOGY</option>
+                        </optgroup></select>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="form-group mb-3">
+                        <label for="getSchoolYear" class="form-label d-flex">Year<p class="m-0 text-danger mx-1">*</p></label>
+                        <select name="getSchoolYear" id="getSchoolYear" class="form-select">
+                            <option value="0">-- Select year --</option>
+                            <option value="First Year">First Year</option>
+                            <option value="Second Year">Second Year</option>
+                            <option value="Third Year">Third Year</option>
+                            <option value="Fourth Year">Fourth Year</option>
+                        </select>
+                    </div>
+                </div>
+
+                
+                    <div class="col-lg-3">
+                    <div class="form-group mb-3">
+                        <label for="getEmail" class="form-label d-flex">PUP email address<p>*</p></label>
+            
+                            <input type="text" class="form-control form-control-custom" id="getEmail" name="getEmail" placeholder="example@iskolarngbayan.edu.ph" autocomplete="off">
+                        
+                    </div>
+                </div>
+                
+                <div class="col-lg-3">
+                    <div class="form-group mb-3">
+                        <label for="getPhone" class="form-label d-flex">Phone number<p class="m-0 text-danger mx-1">*</p></label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="getPhone" name="getPhone" maxlength="10" autocomplete="off" placeholder="+69....">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+            <div class="col-lg-3">
+                    <div class="form-group mb-3">
+                        <label for="region" class="form-label d-flex">Region
+                        	<p class="m-0 text-danger mx-1">*</p></label>
+                        <select name="region" id="region" class="form-select">
+                        	<option value="0" selected="">- Select option -</option>
+                        	<option value="15">AUTONOMOUS REGION IN MUSLIM MINDANAO (ARMM)</option>
+                        	<option value="14">CORDILLERA ADMINISTRATIVE REGION (CAR)</option>
+                        	<option value="13">NATIONAL CAPITAL REGION (NCR)</option>
+                        	<option value="01">REGION I (ILOCOS REGION)</option>
+                        	<option value="02">REGION II (CAGAYAN VALLEY)</option>
+                        	<option value="03">REGION III (CENTRAL LUZON)</option>
+                        	<option value="04">REGION IV-A (CALABARZON)</option>
+                        	<option value="17">REGION IV-B (MIMAROPA)</option>
+                        	<option value="09">REGION IX (ZAMBOANGA PENINSULA)</option>
+                        	<option value="05">REGION V (BICOL REGION)</option>
+                        	<option value="06">REGION VI (WESTERN VISAYAS)</option>
+                        	<option value="07">REGION VII (CENTRAL VISAYAS)</option>
+                        	<option value="08">REGION VIII (EASTERN VISAYAS)</option>
+                        	<option value="10">REGION X (NORTHERN MINDANAO)</option>
+                        	<option value="11">REGION XI (DAVAO REGION)</option>
+                        	<option value="12">REGION XII (SOCCSKSARGEN)</option>
+                        	<option value="16">REGION XIII (Caraga)</option>
+                        </select>
+                    </div>
+            </div>
+            <div class="col-lg-3">
+                    <div class="form-group  mb-3">
+                        <label for="province" class="form-label d-flex">Province
+                        	<p class="m-0 text-danger mx-1">*</p></label>
+                        <select name="province" id="province" class="form-select">
+                            <option value="0">- Select option -</option>
+                        </select>
+                        
+                    </div>
+
+                </div>
+
+            
+                <div class="col-lg-3">
+                    <div class="form-group mb-3">
+                        <label for="city" class="form-label d-flex">City
+                        	<p class="m-0 text-danger mx-1">*</p></label>
+                        <select name="city" id="city" class="form-select">
+                            <option value="0">- Select option -</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="form-group mb-3">
+                        <label for="barangay" class="form-label d-flex">Barangay
+                        	<p class="m-0 text-danger mx-1">*</p></label>
+                        <select name="barangay" id="barangay" class="form-select">
+                            <option value="0">- Select option -</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <hr class="my-4">
+
+                <button class="btn btn-secondary px-5 poppins" type="button" id="backToPage1" onclick="backToPage1()">Back</button>
+<script>
+    function backToPage1() {
+        window.location.href = "personalinfo.html"; // Link to the previous page
+    }
+</script>
+
+<button class="btn btn-success px-5 poppins" type="button" id="nextToPage3" onclick="goToPage3()">Submit</button>
+<script>
+    function goToPage3() {
+        window.location.href = "reflectedinfo.html"; // Link to the next page
+    }
+</script>
+
+</div>
+            </div>
+            </div>
+    </section>
+</body>       
+</html>
