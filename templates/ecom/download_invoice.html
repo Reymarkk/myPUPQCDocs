@@ -122,17 +122,20 @@
           <table class="table table-bordered table-striped">
             <tr>
               <td class="title">
-                <h5>Ecommerce Site - Django</h5>
+                <h5>{{productName}}</h5>
+                
               </td>
+              
 
               <td>
 
 
-                Order Date: {{orderDate}}<br>
+                Date of Request: {{orderDate}}<br>
 
               </td>
             </tr>
           </table>
+          <p>{{productDescription}}</p>
         </td>
       </tr>
 
@@ -141,15 +144,15 @@
           <table>
             <tr>
               <td>
-                Customer : <br>{{customerName}}<br><br>
-                Customer Email :<br> {{customerEmail}}
+                Name : <br>{{customerName}}<br><br>
+                Email :<br> {{customerEmail}}
 
               </td>
 
               <td>
                 Contact Number :<br>
                 {{customerMobile}}<br><br>
-                  Shipment Address :<br> {{shipmentAddress}}
+                  Address :<br> {{shipmentAddress}}
 
               </td>
             </tr>
@@ -163,7 +166,7 @@
           <table>
             <tr>
               <td>
-                Product Image :<br>
+                Document Image :<br>
                  <img src="{% static product_image.url %}" alt="Profile Pic" height="40px" width="40px" /><br><br>
                 Product Price : <br>
                 ${{productPrice}}
