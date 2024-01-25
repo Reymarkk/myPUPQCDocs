@@ -5,8 +5,8 @@
 {% bootstrap_javascript %}
 {% if request.user.is_authenticated %}
     {% include "ecom/customer_navbar.html" %}
-{%else%}
-  {% include "ecom/navbar.html" %}
+{% else %}
+    {% include "ecom/navbar.html" %}
 
 <head>
   
@@ -17,9 +17,8 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <!-- UODR LOGO ICON -
+  <!-- UODR LOGO ICON - AYAW GUMANAAAAAA
   <img src="{% static 'images/favicon.png' %}" rel="shortcut icon" type="image/png">-->
-  <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}" >
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
@@ -38,11 +37,7 @@
 
 
 </head>
-<style>
-  a {
-    text-decoration: none;
-  }
-</style>
+
 
 <body>
   <!-- ======= hero Section ======= -->
@@ -55,8 +50,8 @@
       <h4>This facility to request and track documents is intended <b>ONLY</b> for students/alumni who attended PUPQC</h4>
       <div>
         <br>
-        <a href="/customerlogin" class="btn-get-started scrollto">Request Document</a>
-        <a href="/customerlogin" class="btn-projects scrollto">Track Document</a>
+        <a href="pages-v1/dataprivacy.html" class="btn-get-started scrollto">Request Document</a>
+        <a href="pages-v1/dataprivacy.html" class="btn-projects scrollto">Track Document</a>
       </div>
     </div>
 
@@ -109,7 +104,7 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="box">
               <div class="icon"><i class="bi bi-briefcase"></i></div>
-              <h4 class="title"><a href="/customerlogin">Request a Document</a></h4>
+              <h4 class="title"><a href="">Request a Document</a></h4>
               <p class="description">Effortlessly request transcripts, certificates, and letters with a few clicks. Our user-friendly interface makes document requests a breeze, putting you in control of your academic records.</p>
             </div>
           </div>
@@ -125,7 +120,7 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
             <div class="box">
               <div class="icon"><i class="bi bi-bar-chart"></i></div>
-              <h4 class="title"><a href="/customerlogin">Track your Document</a></h4>
+              <h4 class="title"><a href="">Track your Document</a></h4>
               <p class="description">Stay in the loop with real-time updates on the status of your document requests. No more uncertainty—know exactly when your documents are being processed and when they'll be in your hands.</p>
             </div>
           </div>
@@ -338,29 +333,48 @@
 
   </main><!-- End #main -->
   <!-- ======= Footer ======= -->
-  {% include "ecom/footer.html" %}
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; 2023 <strong>Polytechnic University of the Philippines, Quezon City Branch</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <a href="https://www.pup.edu.ph/terms/" target="_blank">Terms of Use</a> | 
+        <a href="https://www.pup.edu.ph/privacy/" target="_blank">Privacy Statement</a>
+      </div>      
+    </div>
+  </footer>
   
   <!-- End Footer -->
 
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
 {%endif%}
+
+
+        </div>
+    </div>
+</div>
 
   
 
 
 <!-- content start-->
 {% block content %}
-<div class="navbar-search smallsearch col-sm-7 col-xs-11">
-  <form  action="/search" method="get">
-    <div class="row"> <input class="navbar-input col-xs-11" type="search" placeholder="Search for Products, Brands and more" name="query" id="query">
-      <button class="navbar-button col-xs-1" type="submit">
-        <svg width="15px" height="15px">
-                <path d="M11.618 9.897l4.224 4.212c.092.09.1.23.02.312l-1.464 1.46c-.08.08-.222.072-.314-.02L9.868 11.66M6.486 10.9c-2.42 0-4.38-1.955-4.38-4.367 0-2.413 1.96-4.37 4.38-4.37s4.38 1.957 4.38 4.37c0 2.412-1.96 4.368-4.38 4.368m0-10.834C2.904.066 0 2.96 0 6.533 0 10.105 2.904 13 6.486 13s6.487-2.895 6.487-6.467c0-3.572-2.905-6.467-6.487-6.467 "></path>
-        </svg>
-      </button>
-    </div>
-  </form>
-</div>
+
 {% endblock content %}
+{% include "ecom/footer.html" %}
 
 </body>
 </html>

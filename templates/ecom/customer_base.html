@@ -50,8 +50,8 @@
       <h4>This facility to request and track documents is intended <b>ONLY</b> for students/alumni who attended PUPQC</h4>
       <div>
         <br>
-        <a href="pages-v1/dataprivacy.html" class="btn-get-started scrollto">Request Document</a>
-        <a href="pages-v1/dataprivacy.html" class="btn-projects scrollto">Track Document</a>
+        <a href="/customersignup" class="btn-get-started scrollto">Request Document</a>
+        <a href="/customersignup" class="btn-projects scrollto">Track Document</a>
       </div>
     </div>
 
@@ -104,7 +104,7 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="box">
               <div class="icon"><i class="bi bi-briefcase"></i></div>
-              <h4 class="title"><a href="">Request a Document</a></h4>
+              <h4 class="title"><a href="/customersignup">Request a Document</a></h4>
               <p class="description">Effortlessly request transcripts, certificates, and letters with a few clicks. Our user-friendly interface makes document requests a breeze, putting you in control of your academic records.</p>
             </div>
           </div>
@@ -361,7 +361,24 @@
   <script src="{% static 'assets/js/main.js' %}"></script>
 
 {%endif%}
-
+            <center><div class="navbar-search smallsearch col-sm-7 col-xs-11 text-center mt-3 mb-3">
+              <form action="/search" method="get">
+                  <div class="row">
+                      <div class="col-xs-12">
+                          <div class="input-group">
+                              <input class="form-control" type="search" placeholder="Search for Products, Brands and more" name="query" id="query">
+                              <button class="btn btn-outline-secondary" type="submit">
+                                  <svg width="15px" height="15px" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M11.742 10.344a7.5 7.5 0 1 0-1.397 1.398h0a7.5 7.5 0 0 0 1.397-1.398zM14 7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                                  </svg>
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+              </form>
+          </div>
+      
+        </center>
 
         </div>
     </div>
