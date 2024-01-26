@@ -249,7 +249,7 @@ def add_to_cart_view(request,pk):
         response.set_cookie('product_ids', pk)
 
     product=models.Product.objects.get(id=pk)
-    messages.info(request, product.name + ' added to saved successfully!')
+    messages.info(request, product.name + ' added to cart successfully!')
 
     return response
 
