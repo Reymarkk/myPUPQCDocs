@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-{% load static %}
 
 <head>
   <meta charset="utf-8">
+  {% load static %}
   <style>
     @page {
       size: A4;
@@ -18,6 +18,7 @@
       }
     }
 
+    /* Styles for the invoice box */
     .invoice-box {
       max-width: 800px;
       margin: auto;
@@ -30,6 +31,7 @@
       color: #555;
     }
 
+    /* Styles for the invoice table */
     .invoice-box table {
       width: 100%;
       line-height: inherit;
@@ -45,6 +47,7 @@
       text-align: right;
     }
 
+    /* Styles for different sections of the invoice */
     .invoice-box table tr.top table td {
       padding-bottom: 20px;
     }
@@ -82,13 +85,9 @@
       font-weight: bold;
     }
 
+    /* Responsive styles for smaller screens */
     @media only screen and (max-width: 600px) {
-      .invoice-box table tr.top table td {
-        width: 100%;
-        display: block;
-        text-align: center;
-      }
-
+      .invoice-box table tr.top table td,
       .invoice-box table tr.information table td {
         width: 100%;
         display: block;
@@ -96,7 +95,7 @@
       }
     }
 
-    /** RTL **/
+    /* Right-to-left language styles */
     .rtl {
       direction: rtl;
       font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
@@ -114,24 +113,20 @@
 
 <body>
 
+  <!-- Invoice content -->
   <br><br><br>
   <div class="invoice-box">
     <table cellpadding="0" cellspacing="0">
+      <!-- Invoice header -->
       <tr class="top">
         <td colspan="2">
           <table class="table table-bordered table-striped">
             <tr>
               <td class="title">
                 <h5>{{productName}}</h5>
-                
               </td>
-              
-
               <td>
-
-
                 Date of Request: {{orderDate}}<br>
-
               </td>
             </tr>
           </table>
@@ -139,6 +134,7 @@
         </td>
       </tr>
 
+      <!-- Customer information -->
       <tr class="information">
         <td colspan="2">
           <table>
@@ -146,34 +142,27 @@
               <td>
                 Name : <br>{{customerName}}<br><br>
                 Email :<br> {{customerEmail}}
-
               </td>
-
               <td>
                 Contact Number :<br>
                 {{customerMobile}}<br><br>
-                  Address :<br> {{shipmentAddress}}
-
+                Address :<br> {{shipmentAddress}}
               </td>
             </tr>
           </table>
         </td>
       </tr>
 
-
+      <!-- Product details -->
       <tr class="information">
         <td colspan="2">
           <table>
             <tr>
               <td>
                 Document Image :<br>
-                 <img src="{% static product_image.url %}" alt="Profile Pic" height="40px" width="40px" /><br><br>
+                <img src="{% static product_image.url %}" alt="Product Image" height="40px" width="40px" /><br><br>
                 Product Price : <br>
-                ${{productPrice}}
-              </td>
-              <td>
-                Product: <br> {{productName}}<br><br>
-                Description: <br> {{productDescription}}
+                {{productPrice}} pesos
               </td>
 
             </tr>
@@ -181,30 +170,25 @@
         </td>
       </tr>
 
-
-
+      <!-- Order status -->
       <tr class="information">
         <td colspan="2">
           <table>
             <tr>
               <td>
-                Order Status :<br><br>
-                  {{orderStatus}}
+                Document Status :<br><br>
+                {{orderStatus}}
               </td>
             </tr>
           </table>
         </td>
       </tr>
-
-
-      
-
-
     </table>
   </div>
 </body>
+
 <!--
-developed By : sumit kumar
+Developed By: Sumit Kumar
 -->
 
 </html>

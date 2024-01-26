@@ -13,7 +13,7 @@
 
     <div class="panel panel-danger" >
       <div class="panel-heading" style="text-align:center;">
-        <h6 class="panel-title">Recent Transaction</h6>
+        <h6 class="panel-title">Recent Requests</h6>
       </div>
       <table class="table table-hover table-bordered" id="dev-table">
         <thead>
@@ -41,12 +41,12 @@
 
           {% if order.status == 'Pending'%}
           <td> <span class="label label-info">{{order.status}}</span></td>
-          {% elif order.status == 'Delivered' %}
-          <td> <span class="label label-success">{{order.status}}</span></td>
-          {% elif order.status == 'Out for Delivery' %}
+          {% elif order.status == 'Processing' %}
           <td> <span class="label label-warning">{{order.status}}</span></td>
+          {% elif order.status == 'Approved' %}
+          <td> <span class="label label-success">{{order.status}}</span></td>
           {%else%}
-            <td> <span class="label label-primary">{{order.status}}</span></td>
+            <td> <span class="label label-danger">{{order.status}}</span></td>
           {%endif%}
           {% endfor %}
         </tr>
