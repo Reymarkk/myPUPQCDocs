@@ -64,20 +64,11 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto " href="#faqs">FAQs</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
-          <li class="dropdown">
-            <a href="#"><span>My Account</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-                <li><a href="/my-profile">Profile</a></li>
-                <li><a href="/my-order">Track Document Status</a></li>
-                <li><a class="cart-button" href="/cart">Saved Document/s <span class="item-number ">{{ product_count_in_cart }}</span> </a></li>
-              <li><a href="{% url 'logout' %}">Loggout</a></li>
-            </ul>
-          </li>
-          
+          <li><a class="nav-link scrollto active" href="/">Home</a></li>
+          <li><a class="nav-link scrollto" href="/my-order">Document Status</a></li>
+          <li><a class="nav-link scrollto " href="/cart">Saved Documents</a></li>
+          <li><a class="nav-link scrollto" href="/my-profile">Profile</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'logout' %}">Logout</a></li>         
         </ul>
         
         <i class="bi bi-list mobile-nav-toggle"></i>
