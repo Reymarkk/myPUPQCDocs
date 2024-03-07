@@ -24,7 +24,7 @@
 					<div class="card shadow-lg">
 
 						<div class="card-body p-5">
-							<h1 class="fs-4 card-title fw-bold mb-4">For Bachelor's Degree Students/Graduates of PUP Quezon City ONLY</h1>
+							<h1 class="fs-4 card-title fw-bold mb-4 center-text">For Bachelor's Degree Students/Graduates of PUP Quezon City ONLY</h1>
     
                 
                         <form method="post" enctype="multipart/form-data">
@@ -61,7 +61,7 @@
                                     <label for="leaveemails" class="form-label">Password</label>
                                 </div>
                                 <div class="col-lg-9">
-                                    {% render_field userForm.password class="form-control" placeholder="Password" %}
+                                    {% render_field userForm.password class="form-control" placeholder="Create your Password" %}
                                 </div>
                             </div>
                             <div class="row mb-3">
@@ -69,7 +69,7 @@
                                     <label for="leaveemails" class="form-label">Permanent Address</label>
                                 </div>
                                 <div class="col-lg-9">
-                                    {% render_field customerForm.address class="form-control" placeholder="Enter your address" %}
+                                    {% render_field customerForm.address class="form-control" placeholder="Enter your Complete Address" %}
                                 </div>
                             </div>
                             <div class="row mb-3">
@@ -109,17 +109,23 @@
                             </script>
                             -->
                             
-                            <div class="col-12">
-                                <div class="form-check">
+                            <div class="col-12 text-center">
+                                <div class="form-check-center">
                                     <input class="form-check-input" type="checkbox" value="" id="invalidCheck1" required>
                                     <label class="form-check-label" for="invalidCheck1">
-                                        I am a Student/Graduate of PUP Quezon City Branch
+                                        I am a Student/Graduate of PUP Quezon City Campus
                                     </label>
                                 </div>
                             </div>
                             
-                            <div class="col-12">
-                                <div class="form-check">
+                                <style>
+                                    .form-check-label a {
+                                    text-decoration: none;
+                                    }
+                                </style>
+                      
+                            <div class="col-12 text-center">
+                                <div class="form-check-center">
                                     <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
                                     <label class="form-check-label" for="invalidCheck2">
                                         By using this service, you understood and agree to the PUP Online Services 
@@ -131,7 +137,8 @@
                             </div>
         
                             <!-- Button trigger modal -->
-                            <div class="col-12">
+                            <br>
+                            <div class="col-12 text-center">
                                 <input type="submit" name="" value="Create Account" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="submitBtn">
                             </div>
                             <script>
